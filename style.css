@@ -8,61 +8,84 @@
 body {
   background: #f5f7fa;
   color: #333;
+  line-height: 1.6;
 }
 
 .header {
-  background: linear-gradient(135deg, #667eea, #764ba2);
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
   color: white;
   text-align: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
+  animation: fadeDown 1s ease;
 }
 
-.header h1 {
-  font-size: 2.2rem;
-}
-
-.header p {
-  margin: 10px 0 20px;
-}
-
-.btn {
-  background: white;
-  color: #764ba2;
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
-}
-
-.section {
-  padding: 50px 20px;
+section {
+  padding: 40px 20px;
   max-width: 1000px;
   margin: auto;
 }
 
-.section h2 {
+h2 {
   margin-bottom: 15px;
-  color: #764ba2;
+  color: #1e3c72;
 }
 
-.section.light {
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.card {
   background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
 }
 
-ul, ol {
-  margin-left: 20px;
+.card:hover {
+  transform: translateY(-5px);
 }
 
+.ai ul {
+  padding-left: 20px;
+}
+
+.submission ol {
+  padding-left: 20px;
+}
 
 .footer {
-  text-align: center;
-  padding: 30px;
-  background: #222;
+  background: #111;
   color: white;
+  text-align: center;
+  padding: 25px 10px;
 }
 
+.footer span {
+  display: block;
+  margin-top: 8px;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .header h1 {
-    font-size: 1.6rem;
+    font-size: 22px;
   }
 }
