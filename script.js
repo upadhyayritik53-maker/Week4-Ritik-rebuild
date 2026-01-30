@@ -1,3 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Day 20 Final Project Loaded Successfully ✔");
+// Simple confidence animation
+window.addEventListener("load", () => {
+  console.log("Day 20 Project Loaded Successfully 🚀");
 });
